@@ -12,7 +12,7 @@ export default function Login() {
     try {
       const res = await axios.post("/auth/login", { username, password });
       localStorage.setItem("token", res.data.token);
-      navigate("/todos");
+      navigate("/");
       console.log(`登錄成功...${res.data.token}`);
     } catch (err) {
       alert("登录失败");
